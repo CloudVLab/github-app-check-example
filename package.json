@@ -1,0 +1,9 @@
+{
+  "name": "github-app-check-example",
+  "version": "0.0.1",
+  "dependencies": {
+    "github-app": "latest",
+    "@google-cloud/storage": "latest",
+    "tmp": "latest"
+  }
+}
