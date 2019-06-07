@@ -1,10 +1,8 @@
-import { Storage } from '@google-cloud/storage';
-import createApp from 'github-app';
-import tmp from 'tmp';
-
+const { Storage } = require('@google-cloud/storage');
+const createApp = require('github-app');
+const tmp = require('tmp');
 
 const APP_NAME = process.env.APP_NAME || 'Sample Validator';
-
 
 /**
  * Responds to any HTTP request.
@@ -12,7 +10,7 @@ const APP_NAME = process.env.APP_NAME || 'Sample Validator';
  * @param {!express:Request} req HTTP request context.
  * @param {!express:Response} res HTTP response context.
  */
-export async function helloWorld(req, res) {
+exports.checkHandler = async (req, res) => {
   // Validate input
   const repoOwner = req.body.repository.owner.login;
   const repoName = req.body.repository.name;
