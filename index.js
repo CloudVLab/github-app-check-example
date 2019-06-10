@@ -36,7 +36,7 @@ exports.checkHandler = async (req, res) => {
       'owner': repoOwner,
       'repo': repoName,
       'name': APP_NAME,
-	    'head_sha': headSha,
+      'head_sha': headSha,
       'status': 'in_progress'
     });
 
@@ -50,12 +50,12 @@ exports.checkHandler = async (req, res) => {
       'owner': repoOwner,
       'repo': repoName,
       'check_run_id': check.id,
-      'status':'completed',
+      'status': 'completed',
       'conclusion': conclusion,
       'completed_at': completedAt,
-      "output": {
-        "title": `All ${APP_NAME} tests have passed.`,
-        "summary": `All ${APP_NAME} tests have passed.`
+      'output': {
+        'title': `All ${APP_NAME} tests have passed.`,
+        'summary': `All ${APP_NAME} tests have passed.`
       }
     });
   });
